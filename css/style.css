@@ -1,0 +1,333 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    height: 8vh;
+    top: 0;
+    left: 0;
+    background: black;
+    color: aliceblue;
+    padding: 0 2rem;
+    z-index: 20;
+        
+}
+
+nav {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    user-select: none;
+}
+
+.logo img {
+    height: 8rem;
+    width: 8rem;
+    cursor: pointer;
+}
+
+.toggle {
+    display: none;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    list-style: none;
+    width: 500px;
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu li:hover{
+    background-color: #C5B663;
+    border-radius:0.4rem;
+    padding: 0.2rem;
+    transform: scale(1.1);
+    transition: transform 0.5s;
+}
+
+
+.hero {
+    height: 100vh;
+    width: 100%;
+    background-image: url("/assets/colors-background.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+   justify-content: center;
+    align-items: center;
+}
+
+.hero img {
+    height: 20rem;
+    width: 50rem;
+}
+
+
+/*activities styling*/
+
+.activities {
+    height: 100%;
+}
+
+.text-image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+}
+
+.text-image-container p {
+    padding: 2rem;
+    width: 40rem;
+}
+
+.text-image-container img {
+    height: 20rem;
+    width: 30rem;
+}
+
+.activities-container {
+    display: flex;
+    align-items: center;    
+    justify-content: space-evenly;
+    height: 30rem;    
+}
+
+
+
+
+.image-title {
+    display: inline-block;
+    position: relative;
+}
+
+.image-title .text {
+    background: rgba(44, 62, 80, 0.8);
+    z-index: 1;
+    position: absolute;
+    text-align: center;
+    font-family: Georgia;
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+    top: 50%;
+    color: white;
+    width: 70%;
+}
+
+
+
+
+
+
+
+
+
+.card {
+    position: relative;
+    width: 20rem;
+    height: 15rem;
+    margin: 0.5rem;
+    text-align: center;
+    line-height: 1.5rem;
+    color: #ecf0f1;
+    border-radius: 1rem;
+   transform-style: preserve-3d;
+  }
+
+  .face {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 0.5rem;
+    background-size: cover;
+    background-position: center center;
+    backface-visibility: hidden;
+    transition: transform 0.8s ease-in-out;
+  }
+
+  .face--back {
+    background: #2c3e50;
+    font-size: 1.1rem;
+    transform: rotateY(180deg);
+    padding: 3rem 1rem;
+  }
+  
+  .card:hover .face--front {
+    transform: rotateY(-180deg);
+  }
+  
+  .card:hover .face--back {
+    transform: rotateY(0deg);
+  }
+
+.face--front img {
+    height: 15rem;
+    width: 20rem;
+    border-radius: 0.5rem;
+    filter: brightness(70%);
+}
+
+/*footer styling*/
+
+footer{
+    position: absolute;
+    background: #111;
+    height: 15rem;
+    width: 100%;
+    padding-top: 40px;
+    color: #fff;
+}
+
+footer img {
+    height: 5rem;
+}
+
+.footer-content{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.socials{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem 0 3rem 0;
+}
+.socials li{
+    margin: 0 10px;
+}
+.socials a{
+    text-decoration: none;
+    color: #fff;
+    border: 1.1px solid white;
+    padding: 5px;
+    border-radius: 50%;
+}
+.socials a i{
+    font-size: 1.1rem;
+    width: 25px;
+    transition: color .4s ease;
+}
+.socials a:hover i{
+    color: aqua;
+}
+
+.footer-menu{
+    float: right;
+  }
+  
+  .footer-menu ul{
+    display: flex;
+  }
+  
+  .footer-menu ul li{
+  padding-right:0;
+  display: block;
+  }
+  
+  .footer-menu ul li a{
+    color: #cfd2d6;
+    text-decoration: none;
+  }
+  
+  .footer-menu ul li a:hover{
+    color: #27bcda;
+  }
+
+.footer-bottom{
+    background: #000;
+    width: 100%;
+    padding: 10px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
+.footer-bottom p{
+    float: left;
+    font-size: 14px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+ }
+ .footer-bottom p a{
+   color:#44bae8;
+   font-size: 16px;
+   text-decoration: none;
+ }
+ .footer-bottom span{
+     text-transform: uppercase;
+     opacity: .4;
+     font-weight: 200;
+ }
+
+
+@media all and (max-width: 991px) {
+    .toggle {
+        display: block;
+        font-size: 2rem;
+        cursor: pointer;
+        position: relative;
+        z-index: 20;
+    }
+
+    .open {
+        display: block;
+    }
+
+    .close {
+        display: none;
+    }
+
+    .show .open{
+        display: none;
+
+    }
+    
+    .show .close {
+        display: block ;
+        position: relative;
+        z-index: 20;
+    }
+
+    .menu li a {
+        font-size: 2rem;
+    }
+
+    .menu {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        flex-direction: column;
+        padding: 2rem;
+        justify-content: space-around;
+        transform: translateX(-100%);
+        transition: transform 1s;
+    }
+
+    .show .menu {
+        transform: translateX(0);
+    }
+}
