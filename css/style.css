@@ -1,20 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Rock+Salt&family=Work+Sans&display=swap');
+
+
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Work Sans";
+  
 }
+
+body {
+    background-color: #f9f9f9;
+}
+
+h1, h2 {
+    font-family: "Rock Salt";
+text-align: center;
+padding-top: 2rem;
+margin-top: 4rem;
+}
+
+
 
 header {
     position: fixed;
     width: 100%;
-    height: 8vh;
+    height: 6vh;
     top: 0;
     left: 0;
-    background: black;
-    color: aliceblue;
     padding: 0 2rem;
-    z-index: 20;
-        
+    z-index: 20;      
 }
 
 nav {
@@ -24,6 +40,12 @@ nav {
     justify-content: space-between;
     align-items: center;
     user-select: none;
+    
+}
+
+.bgColor {
+    background-color:#C5B663;
+    color: aliceblue;
 }
 
 .logo img {
@@ -42,11 +64,16 @@ nav {
     align-items: center;
     list-style: none;
     width: 500px;
+    margin-left: auto;
+    margin-right: 0;
+   
 }
 
 .menu li a {
     text-decoration: none;
-    color: white;
+    color: #000;
+    font-family: "Rock Salt";
+    font-size: 0.8rem;
 }
 
 .menu li:hover{
@@ -61,8 +88,8 @@ nav {
 .hero {
     height: 100vh;
     width: 100%;
-    background-image: url("/assets/colors-background.svg");
-    background-size: cover;
+    background-image: url("/assets/background.png");
+    background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -73,7 +100,10 @@ nav {
 .hero img {
     height: 20rem;
     width: 50rem;
+    margin-left: 35rem;
 }
+
+
 
 
 /*activities styling*/
@@ -90,13 +120,15 @@ nav {
 }
 
 .text-image-container p {
-    padding: 2rem;
+    padding: 1rem 5rem;
     width: 40rem;
+    font-size: 1.2rem;
 }
 
 .text-image-container img {
     height: 20rem;
     width: 30rem;
+    border-radius: 0.5rem;
 }
 
 .activities-container {
@@ -115,7 +147,7 @@ nav {
 }
 
 .image-title .text {
-    background: rgba(44, 62, 80, 0.8);
+    background: rgba(0, 106, 68, 0.6);
     z-index: 1;
     position: absolute;
     text-align: center;
@@ -127,12 +159,6 @@ nav {
     color: white;
     width: 70%;
 }
-
-
-
-
-
-
 
 
 
@@ -163,10 +189,10 @@ nav {
   }
 
   .face--back {
-    background: #2c3e50;
-    font-size: 1.1rem;
+    background: rgba(0, 106, 68, 1);
+    font-size: 1rem;
     transform: rotateY(180deg);
-    padding: 3rem 1rem;
+    padding: 1.5rem 1rem;
   }
   
   .card:hover .face--front {
@@ -182,6 +208,38 @@ nav {
     width: 20rem;
     border-radius: 0.5rem;
     filter: brightness(70%);
+}
+
+
+/*contact styling*/
+
+.contact p {
+    padding: 1rem 10rem;
+    text-align: center;
+}
+.contact .socials {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+}
+.contact .socials i {
+    color: #111;
+    font-size: 2rem;
+  
+    
+}
+
+.contact .adress {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    
+}
+
+.contact .adress i {
+    margin-right: 1rem;
 }
 
 /*footer styling*/
@@ -207,30 +265,29 @@ footer img {
     text-align: center;
 }
 
-.socials{
+footer .socials{
     list-style: none;
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 1rem 0 3rem 0;
 }
-.socials li{
+footer .socials li{
     margin: 0 10px;
 }
-.socials a{
+footer .socials a{
     text-decoration: none;
-    color: #fff;
-    border: 1.1px solid white;
-    padding: 5px;
+    color:#C5B663;
+    padding: 2px;
     border-radius: 50%;
 }
 .socials a i{
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     width: 25px;
     transition: color .4s ease;
 }
 .socials a:hover i{
-    color: aqua;
+    color:#C5B663
 }
 
 .footer-menu{
@@ -252,7 +309,7 @@ footer img {
   }
   
   .footer-menu ul li a:hover{
-    color: #27bcda;
+    color:#C5B663;
   }
 
 .footer-bottom{
@@ -270,7 +327,7 @@ footer img {
     text-transform: capitalize;
  }
  .footer-bottom p a{
-   color:#44bae8;
+   color:#C5B663;
    font-size: 16px;
    text-decoration: none;
  }
@@ -310,7 +367,8 @@ footer img {
     }
 
     .menu li a {
-        font-size: 2rem;
+        font-size: 1rem;
+        color: aliceblue;
     }
 
     .menu {
@@ -319,15 +377,60 @@ footer img {
         top: 0;
         width: 100%;
         height: 100vh;
-        background: black;
+        background: grey;
         flex-direction: column;
         padding: 2rem;
         justify-content: space-around;
         transform: translateX(-100%);
         transition: transform 1s;
+        margin: 0 auto;
     }
 
     .show .menu {
         transform: translateX(0);
     }
+
+    .hero img {
+        height: 10rem;
+        width: 25rem;
+        margin-left: 10rem;
+    }
+
+    h1, h2 {
+        font-size: 1rem;
+    }
+
+    .about img {
+        height: 12rem;
+        width: 16rem;
+        margin-top: 1rem;
+    
+    }
+
+    section {
+        width: 100%;
+        margin-top: 2rem;
+    }
+    .about p {
+        width: 25rem;
+        font-size: 1rem;
+        padding: 0 1rem;
+    }
+
+    h2 {
+        margin-top: 2rem;
+        padding-top: 0;
+    }
+
+
+    .activities-container {
+       flex-direction: column;   
+      
+    }
+
+    .activities-container .card {
+        margin-bottom: 2rem;
+    }
+
+    
 }
