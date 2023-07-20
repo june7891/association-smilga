@@ -5,7 +5,11 @@ toggle.addEventListener('click', function() {
     body.classList.toggle('show');
 });
 
+let link = document.querySelector('.menu');
 
+link.addEventListener('click', function() {
+    body.classList.remove('show');
+})
 
 
 function changeNavBg() {
